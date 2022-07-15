@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  backend-test:
+    build: .
+    image: backend-test
+    ports:
+      - 4001:4001
+    volumes:
+      - .:/usr/src
+      - ./node_modules:/usr/src/node_modules
+    container_name: 'backend-test'
+    restart: always
